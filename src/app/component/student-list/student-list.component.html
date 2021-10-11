@@ -1,4 +1,7 @@
 <div class="container">
+
+    <a class="btn btn-outline-primary"  [routerLink]="['/student-create']">New</a>
+
     <br />
     <div class="table-responsive">
         <table class="table table-bordered">
@@ -9,6 +12,7 @@
                     <td>FirstMidName</td>
                     <td>EnrollmentDate</td>
                     <td>FullName</td>
+                    <td></td>
 
                 </tr>
 
@@ -20,6 +24,13 @@
                     <td>{{student.FirstMidName }}</td>
                     <td>{{student.EnrollmentDate }}</td>
                     <td>{{student.FullName }}</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-warning"
+                        [routerLink]="[ '/student-edit', student.ID ]">Edit </a>
+
+                        <a class="btn btn-sm btn-outline-danger"
+                        [routerLink]="[ '/student-delete', student.ID ]">Delete </a>
+                    </td>
 
                 </tr>
             </tbody>
