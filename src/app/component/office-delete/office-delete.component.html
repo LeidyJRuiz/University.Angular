@@ -1,0 +1,41 @@
+<div class="container">
+
+    <h2>Delete</h2>
+    <hr>
+    <div class="alert alert-danger col-md-12" role="alert">Are you Sure?
+        <br>
+    <div class="btn-group" role="group">
+        <button class="btn btn-outline-danger" (click)="delete()">Delete</button>
+        <a class="btn btn-outline-danger" [routerLink]="[ '/office-list' ]">Back</a>
+    </div>
+    </div>
+        <div class="form-row" *ngIf="showMsg">
+            <div class="alert alert-{{type}} col-md-12" role="alert">
+                {{msg}}
+            </div>
+        </div>
+
+    <form #officeForm="ngForm">
+        <div class="form-row">
+            <div class="col-md-6 form-floating">
+                <input type="number" id="InstructorID" name="InstructorID" placeholder="Enter the InstructorID" class="form-control"
+                #InstructorID [(ngModel)]="office.InstructorID" autocomplete="off" />
+            <label for="InstructorID">InstructorID</label>
+            
+            </div>
+            <div class="col-md-6 form-floating">
+                <input type="text" id="Location" name="Location" placeholder="Enter the Location" class="form-control"
+                    #Location [(ngModel)]="office.Location" autocomplete="off" />
+                <label for="Location">Location</label>
+
+
+            </div>
+
+        </div>
+        <br>
+        
+    </form>
+
+</div>
+
+

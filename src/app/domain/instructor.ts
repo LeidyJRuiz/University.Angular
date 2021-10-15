@@ -5,5 +5,7 @@ public LastName : string,
 public FirstMidName : string,
 public HireDate : Date
 
-    ){}
+    ){
+        
+    }
 }

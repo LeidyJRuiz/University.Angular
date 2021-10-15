@@ -1,0 +1,37 @@
+<div class="container">
+
+    <a class="btn btn-outline-primary"  [routerLink]="['/office-create']">New</a>
+
+    <br />
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>InstructorID</td>   
+                    <td>Location</td>
+                    
+                    <td></td>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let office of offices">
+                    <td>{{office.InstructorID }}</td>
+                    <td>{{office.Location}}</td>
+                    
+                    <td>
+                        <a class="btn btn-sm btn-outline-warning"
+                        [routerLink]="[ '/office-edit', office.InstructorID ]">Edit </a>
+
+                        <a class="btn btn-sm btn-outline-danger"
+                        [routerLink]="[ '/office-delete', office.InstructorID ]">Delete </a>
+                    </td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

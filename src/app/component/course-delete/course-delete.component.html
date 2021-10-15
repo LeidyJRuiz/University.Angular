@@ -1,0 +1,45 @@
+<div class="container">
+
+    <h2>Delete</h2>
+    <hr>
+    <div class="alert alert-danger col-md-12" role="alert">Are you Sure?
+        <br>
+    <div class="btn-group" role="group">
+        <button class="btn btn-outline-danger" (click)="delete()">Delete</button>
+        <a class="btn btn-outline-danger" [routerLink]="[ '/course-list' ]">Back</a>
+    </div>
+    </div>
+        <div class="form-row" *ngIf="showMsg">
+            <div class="alert alert-{{type}} col-md-12" role="alert">
+                {{msg}}
+            </div>
+        </div>
+
+    <form #courseForm="ngForm">
+        <div class="form-row">
+            <div class="col-md-4 form-floating">
+                <input type="number" id="CourseID" name="CourseID" placeholder="Enter the CourseID" class="form-control"
+                    #CourseID [(ngModel)]="course.CourseID"  autocomplete="off" />
+                <label for="CourseID">CourseID </label>
+
+
+            </div>
+            <div class="col-md-4 form-floating">
+                <input type="text" id="Title" name="Title" placeholder="Enter the Title"
+                    class="form-control" #Title  [(ngModel)]="course.Title"  autocomplete="off" />
+                <label for="Title">Title</label>
+
+            </div>
+            <div class="col-md-4 form-floating">
+                <input type="number" id="Credits" name="Credits" placeholder="Enter the Credits"
+                    class="form-control" #Credits  [(ngModel)]="course.Credits" autocomplete="off" />
+                <label for="Credits">Credits</label>
+            </div>
+        </div>
+<br>
+
+    </form>
+
+</div>
+
+

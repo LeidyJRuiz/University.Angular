@@ -1,0 +1,41 @@
+<div class="container">
+
+    <a class="btn btn-outline-primary"  [routerLink]="['/instructor-create']">New</a>
+
+    <br />
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>LastName</td>
+                    <td>FirstMidName</td>
+                    <td>HireDate</td>
+                   
+                    <td></td>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let instructor of instructors">
+                    <td>{{instructor.ID }}</td>
+                    <td>{{instructor.LastName}}</td>
+                    <td>{{instructor.FirstMidName }}</td>
+                    <td>{{instructor.HireDate }}</td>
+                    
+                    <td>
+                        <a class="btn btn-sm btn-outline-warning"
+                        [routerLink]="[ '/instructor-edit',instructor.ID ]">Edit </a>
+
+                        <a class="btn btn-sm btn-outline-danger"
+                        [routerLink]="[ '/instructor-delete',instructor.ID ]">Delete </a>
+                    </td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
